@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>墨青的博客</title>
     <link rel="icon" href="/resources/icon.png" type="image/png">
@@ -11,38 +12,74 @@
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
         }
-        header {
+        .sidebar {
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            width: 250px;
+            min-height: 100vh;
             padding: 20px;
+            position: fixed;
+        }
+        .sidebar img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .sidebar nav a {
+            display: block;
+            color: #fff;
+            margin: 10px 0;
+            text-decoration: none;
+            padding: 10px;
+            background-color: #444;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .sidebar nav a:hover {
+            background-color: #555;
+        }
+        .sidebar nav a.active {
+            background-color: #555;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            flex: 1;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .posts {
+            column-count: 3;
+            column-gap: 20px;
         }
         .post {
             background-color: #fff;
-            margin: 10px;
+            margin: 0 0 20px;
             padding: 20px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex: 1;
-            max-width: 600px;
-            min-width: 300px;
+            break-inside: avoid;
+        }
+        .post h2 {
+            margin: 0 0 10px;
+        }
+        .post p {
+            margin: 0;
+        }
+        .post .date {
+            font-size: 0.8em;
+            color: #666;
+            margin-bottom: 10px;
         }
         footer {
             background-color: #333;
@@ -54,29 +91,94 @@
             bottom: 0;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const links = document.querySelectorAll(".sidebar nav a");
+            const contents = document.querySelectorAll(".tab-content");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    links.forEach(link => link.classList.remove("active"));
+                    this.classList.add("active");
+                    const targetId = this.getAttribute("data-target");
+                    contents.forEach(content => {
+                        content.classList.remove("active");
+                        if (content.id === targetId) {
+                            content.classList.add("active");
+                        }
+                    });
+                });
+            });
+
+            // Sort posts by date
+            const postsContainer = document.querySelector(".posts");
+            const posts = Array.from(document.querySelectorAll(".post"));
+            posts.sort((a, b) => new Date(b.getAttribute("data-date")) - new Date(a.getAttribute("data-date")));
+            posts.forEach(post => postsContainer.appendChild(post));
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <h1>欢迎来到墨青的博客</h1>
-    </header>
-    <nav>
-        <a href="#">主页</a>
-        <a href="#">关于我</a>
-        <a href="#">联系我</a>
-    </nav>
-    <div class="container">
-        <div class="post">
-            <h2>我的第一篇博客</h2>
-            <p>这是我个人博客的第一篇文章。欢迎大家留言互动！😎</p>
+    <div class="sidebar">
+        <img src="/resources/avatar.jpg" alt="我的头像">
+        <nav>
+            <a href="#" data-target="home" class="active">主页</a>
+            <a href="#" data-target="blog">博客</a>
+            <a href="#" data-target="about">关于我</a>
+            <a href="#" data-target="contact">联系我</a>
+        </nav>
+    </div>
+    <div class="content">
+        <div id="home" class="tab-content active">
+            <h2>欢迎来到我的博客</h2>
+            <p>这是我的主页。欢迎光临！😎</p>
         </div>
-        <div class="post">
-            <h2>再见了，昨天</h2>
-            <p>今天的事就别留到明天，昨天的事就让它随风吧。😊</p>
+        <div id="blog" class="tab-content">
+            <div class="posts">
+                <div class="post category1" data-date="2024-06-17">
+                    <div class="date">2024年6月17日</div>
+                    <h2>我的第一篇博客</h2>
+                    <p>这是我个人博客的第一篇文章。欢迎大家留言互动！😎</p>
+                </div>
+                <div class="post category2" data-date="2024-06-16">
+                    <div class="date">2024年6月16日</div>
+                    <h2>再见了，昨天</h2>
+                    <p>今天的事就别留到明天，昨天的事就让它随风吧。😊</p>
+                </div>
+                <div class="post category3" data-date="2024-06-15">
+                    <div class="date">2024年6月15日</div>
+                    <h2>新的开始</h2>
+                    <p>每一天都是新的开始，要勇敢迎接挑战！🔥</p>
+                </div>
+                <div class="post category1" data-date="2024-06-14">
+                    <div class="date">2024年6月14日</div>
+                    <h2>技术分享</h2>
+                    <p>今天我要分享一些前端开发的技巧，希望对你们有所帮助。💻</p>
+                </div>
+                <div class="post category2" data-date="2024-06-13">
+                    <div class="date">2024年6月13日</div>
+                    <h2>旅行记</h2>
+                    <p>最近去了一趟西藏，风景真的是美极了。🏞️</p>
+                </div>
+                <div class="post category3" data-date="2024-06-12">
+                    <div class="date">2024年6月12日</div>
+                    <h2>生活感悟</h2>
+                    <p>生活中有很多值得我们去思考和感悟的事情。🧘‍♂️</p>
+                </div>
+            </div>
+        </div>
+        <div id="about" class="tab-content">
+            <h2>关于我</h2>
+            <p>这里是关于我的页面。😊</p>
+        </div>
+        <div id="contact" class="tab-content">
+            <h2>联系我</h2>
+            <p>这里是联系我的页面。📧</p>
         </div>
     </div>
     <footer>
         <p>© 2024 墨青的博客. 保留所有权利.</p>
     </footer>
-    <!--  <p>也可以加我的个人<a href="https://qm.qq.com/q/ciebGjt7sk">QQ群</a></p>  -->
 </body>
 </html>
