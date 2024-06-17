@@ -1,12 +1,82 @@
 <!DOCTYPE HTML>
 <head>
-	<meta charset="utf-8">
-	<link rel="icon" href="/resources/icon.png">
-	<title>墨青的博客</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>墨青的博客</title>
+    <link rel="icon" href="/resources/icon.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .post {
+            background-color: #fff;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
+            max-width: 600px;
+            min-width: 300px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>欢迎来到墨青的博客</h1>
-    <p><del>还没想好在网站上干些什么的说</del>......</p>
-    <p>你可以看看我的<a href="https://space.bilibili.com/399164327">bilibili</a></p>
-    <p>也可以加我的个人<a href="https://qm.qq.com/q/ciebGjt7sk">QQ群</a></p>
+    <header>
+        <h1>欢迎来到墨青的博客</h1>
+    </header>
+    <nav>
+        <a href="#">主页</a>
+        <a href="#">关于我</a>
+        <a href="#">联系我</a>
+    </nav>
+    <div class="container">
+        <div class="post">
+            <h2>我的第一篇博客</h2>
+            <p>这是我个人博客的第一篇文章。欢迎大家留言互动！😎</p>
+        </div>
+        <div class="post">
+            <h2>再见了，昨天</h2>
+            <p>今天的事就别留到明天，昨天的事就让它随风吧。😊</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 墨青的博客. 保留所有权利.</p>
+    </footer>
+    <!--  <p>也可以加我的个人<a href="https://qm.qq.com/q/ciebGjt7sk">QQ群</a></p>  -->
 </body>
+</html>
