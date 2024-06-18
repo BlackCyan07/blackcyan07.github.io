@@ -71,12 +71,6 @@ body {
     outline: none;
 }
 
-.search input {
-    width: calc(100% - 80px);
-    padding: 5px;
-    margin-right: 10px;
-}
-
 .search button {
     padding: 5px 10px;
 }
