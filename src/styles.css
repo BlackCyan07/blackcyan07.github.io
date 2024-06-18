@@ -91,6 +91,14 @@ body {
     height: 30%; /* 调整博客文章卡片高度 */
 }
 
+.card {
+    width: 600px;
+    height: 175px;
+    box-shadow: 04px 8px 0 rgba(0, 0, 0, 0.2), 06px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    color: #202020;
+}
+
 /* 右侧公告和搜索框样式 */
 .announcement {
     width: 300px;
