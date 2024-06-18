@@ -87,14 +87,14 @@ body {
 }
 
 #blog-posts {
-    width: 600px; /* 调整博客文章卡片宽度 */
-    height: 30%; /* 调整博客文章卡片高度 */
+    max-width: 1000px; /* 调整博客文章卡片宽度 */
+    height: 25%; /* 调整博客文章卡片高度 */
 }
 
 .card {
-    width: 50%;
-    height: 16%;
-    box-shadow: 04px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height: 200px;
+    box-shadow: 02px 4px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     background-color: #e1e1e1;
     color: #000000;
