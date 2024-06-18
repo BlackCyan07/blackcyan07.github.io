@@ -11,3 +11,11 @@ function loadPage(pageUrl) {
             document.getElementById('blog-posts').innerHTML = data; // 将内容插入到指定区域
         });
 }
+
+// 切换移动端菜单显示
+function toggleMobileMenu() {
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.mobile-overlay');
+    sidebar.classList.toggle('mobile-active');
+    overlay.classList.toggle('active');
+}

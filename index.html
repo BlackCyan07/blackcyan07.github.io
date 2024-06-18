@@ -10,9 +10,15 @@
     <div class="container">
         <!-- 左侧悬浮菜单 -->
         <aside class="sidebar">
+            <div class="avatar">
+                <img src="resources/avatar.png" alt="头像">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="搜索...">
+                <button>搜索</button>
+            </div>
             <nav>
                 <ul>
-                    <!-- 菜单项，通过onclick事件加载不同页面 -->
                     <li><a href="#" onclick="loadPage('home.html')">首页</a></li>
                     <li><a href="#" onclick="loadPage('about.html')">关于我</a></li>
                     <li><a href="#" onclick="loadPage('categories.html')">分类</a></li>
@@ -29,16 +35,15 @@
         </main>
         <!-- 右侧固定公告和搜索框 -->
         <aside class="announcement">
-            <div class="search">
-                <!-- 搜索框 -->
-                <input type="text" placeholder="搜索...">
-                <button>搜索</button>
-            </div>
             <div class="notices">
                 <h2>公告</h2>
                 <p>这里是公告内容...</p>
             </div>
         </aside>
+        <!-- 移动端菜单按钮 -->
+        <div class="mobile-menu-button" onclick="toggleMobileMenu()">☰</div>
+        <!-- 移动端暗幕背景 -->
+        <div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
     </div>
     <!-- 引入JavaScript文件 -->
     <script src="src/scripts.js"></script>
