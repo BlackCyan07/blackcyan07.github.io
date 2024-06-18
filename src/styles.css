@@ -13,7 +13,7 @@ body {
 
 /* 左侧菜单样式 */
 .sidebar {
-    width: 200px;
+    width: 250px;
     background-color: #1e1e1e;
     position: fixed;
     height: 100%;
@@ -83,11 +83,12 @@ body {
     overflow-y: scroll;
     height: 100vh;
     display: flex;
-    justify-content: center; /* 博客文章居中 */
+    justify-content: normal; /* 博客文章居中 */
 }
 
 #blog-posts {
     width: 600px; /* 调整博客文章卡片宽度 */
+    height: 200px;/* 调整博客文章卡片高度 */
 }
 
 /* 右侧公告和搜索框样式 */
