@@ -23,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    backdrop-filter: blur(50px);
 }
 
 .sidebar .avatar {
@@ -95,6 +96,7 @@ body {
     width: 800px;
     height: 200px;
     left: 440px;
+    margin: 25px;
     text-align: center;
     background-color: #e1e1e1;
     color: #000000;
@@ -105,7 +107,7 @@ body {
     padding-top: 20px;
 }
 
-/* 右侧公告和搜索框样式 */
+/* 右侧公告样式 */
 .announcement {
     width: 300px;
     background-color: #e1e1e1;
@@ -114,6 +116,7 @@ body {
     height: 100%;
     padding: 30px;
     overflow: hidden;
+    backdrop-filter: blur(50px);
 }
 
 /* 响应式布局 */
@@ -185,6 +188,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        backdrop-filter: blur(50px);
     }
 
     .sidebar nav ul li a {
@@ -204,15 +208,18 @@ body {
         height: 100%;
         padding: 20px;
         overflow: hidden;
+        backdrop-filter: blur(50px);
     }
 
     .card {
         width: 800px;
         height: 200px;
         left: 440px;
+        margin: 25px;
         text-align: center;
         background-color: #111111;
         color: #ffffff;
+        backdrop-filter: blur(50px);
     }
 
     .search [type="input"] {
