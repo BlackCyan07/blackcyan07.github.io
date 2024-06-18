@@ -101,6 +101,7 @@ body {
     background-color: #e1e1e1;
     color: #000000;
     backdrop-filter: blur(50px);
+    box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
 }
 
 .card article {
@@ -220,6 +221,7 @@ body {
         background-color: #111111;
         color: #ffffff;
         backdrop-filter: blur(50px);
+        box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
     }
 
     .search [type="input"] {
