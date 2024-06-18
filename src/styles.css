@@ -98,6 +98,11 @@ body {
     text-align: center;
     background-color: #e1e1e1;
     color: #000000;
+    backdrop-filter: blur(50px);
+}
+
+.card article {
+    padding-top: 20px;
 }
 
 /* 右侧公告和搜索框样式 */
@@ -107,7 +112,7 @@ body {
     position: fixed;
     right: 0;
     height: 100%;
-    padding: 20px;
+    padding: 30px;
     overflow: hidden;
 }
 
