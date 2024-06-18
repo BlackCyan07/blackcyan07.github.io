@@ -100,8 +100,9 @@ body {
     text-align: center;
     background-color: #e1e1e1;
     color: #000000;
+    border-radius: 50px;
     backdrop-filter: blur(50px);
-    box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
+    box-shadow: 0 5px 10px rgba(20, 20, 20, 0.2);
 }
 
 .card article {
@@ -220,8 +221,9 @@ body {
         text-align: center;
         background-color: #111111;
         color: #ffffff;
+        border-radius: 50px;
         backdrop-filter: blur(50px);
-        box-shadow: 0 5px 15px rgba(20, 20, 20, 0.8);
+        box-shadow: 0 5px 10px rgba(20, 20, 20, 0.2);
     }
 
     .search [type="input"] {
