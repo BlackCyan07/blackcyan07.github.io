@@ -88,9 +88,7 @@ body {
 
 #blog-posts {
     width: 600px; /* 调整博客文章卡片宽度 */
-    height: 30%;/* 调整博客文章卡片高度 */
-    border: 2px;
-    border-radius: 15%;
+    height: 30%; /* 调整博客文章卡片高度 */
 }
 
 /* 右侧公告和搜索框样式 */
