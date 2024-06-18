@@ -81,15 +81,15 @@ body {
     margin-left: 200px;
     flex-grow: 1;
     padding: 20px;
-    overflow-y: scroll;
     height: 100vh;
     display: flex;
-    justify-content: center /* 博客文章居中 */
+    /*justify-content: center; *//* 水平居中 */
 }
 
 #blog-posts {
-    max-width: 1000px; /* 调整博客文章卡片宽度 */
-    height: 25%; /* 调整博客文章卡片高度 */
+    width: 85%;
+    max-width: 1200px; /* 设置最大宽度 */
+    margin: 0 auto; /* 水平居中 */
 }
 
 .card {
@@ -100,9 +100,14 @@ body {
     text-align: center;
     background-color: #e1e1e1;
     color: #000000;
-    border-radius: 50px;
+    border-radius: 5px;
     backdrop-filter: blur(50px);
     box-shadow: 0 5px 10px rgba(20, 20, 20, 0.2);
+    transition: transform 0.2s; /* 动画 */
+}
+
+.card:hover {
+    transform: scale(1.1);
 }
 
 .card article {
@@ -232,7 +237,7 @@ body {
         height: 20px;
         background-color: #050505;
         border: none;
-        border-radius: 20px;
+        border-radius: 5px;
         padding-left: 15px;
         outline: none;
     }
