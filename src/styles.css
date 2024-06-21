@@ -226,7 +226,7 @@ body {
         text-align: center;
         background-color: #111111;
         color: #ffffff;
-        border-radius: 50px;
+        border-radius: 5px;
         backdrop-filter: blur(50px);
         box-shadow: 0 5px 10px rgba(20, 20, 20, 0.2);
     }
