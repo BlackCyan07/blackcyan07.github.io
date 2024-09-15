@@ -3,47 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="y78sUUs4xtlusO0DVRvFyygHLG-nyvncX7qE8zJfYpE" />
     <title>墨青的博客</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="res/blog.png">
 </head>
 <body>
-    <div class="container">
-        <!-- 左侧悬浮菜单 -->
-        <aside class="sidebar">
-            <div class="avatar">
-                <img src="resources/avatar.png" alt="头像" height="100%" width="100%">
-            </div>
-            <div class="search">
-                <input type="text" placeholder="搜索...">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#" onclick="loadPage('home.html')">首页</a></li>
-                    <li><a href="#" onclick="loadPage('about.html')">关于</a></li>
-                    <li><a href="#" onclick="loadPage('contact.html')">联系</a></li>
-                </ul>
-            </nav>
-        </aside>
-        <!-- 中间的博客文章内容区域 -->
-        <main class="content">
-            <div id="blog-posts">
-                <!-- 通过JavaScript动态加载的内容区域 -->
-            </div>
-        </main>
-        <!-- 右侧固定公告和搜索框 -->
-        <aside class="announcement">
-            <div class="notices">
-                <h2>公告</h2>
-                <p>别工作了，饮咖啡先</p>
-                <img src="resources/java.png" alt="咖啡" height="100%" width="100%"></img>
-            </div>
-        </aside>
-        <!-- 移动端菜单按钮 -->
-        <div class="mobile-menu-button" onclick="toggleMobileMenu()">☰</div>
-        <!-- 移动端暗幕背景 -->
-        <div class="mobile-overlay" onclick="toggleMobileMenu()"></div>
-    </div>
-    <!-- 引入JavaScript文件 -->
-    <script src="src/scripts.js"></script>
+    <header>
+        <h1>欢迎来到墨青的博客</h1>
+    </header>
+    <main>
+        <!-- 用于显示文章的容器 -->
+        <div id="articles-container"></div>
+    </main>
+    <footer>
+        <div class="social-icons">
+            <a href="https://space.bilibili.com/399164327" target="_blank" title="bilibili">
+                <img src="res/bilibili.png" alt="bilibili">
+            </a>
+            <a href="https://github.com/BlackCyan07/" target="_blank" title="github">
+                <img src="res/github.png" alt="github">
+            </a>
+            <a href="http://mc.blackcyan07.top/" target="_blank" title="博客">
+                <img src="res/BCisland.png" alt="BCisland">
+            </a>
+        </div>
+        <p>Copyright © 2024 墨青</p>
+    </footer>
+    <script src="js/loadArticles.js"></script>
 </body>
 </html>

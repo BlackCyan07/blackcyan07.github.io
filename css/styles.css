@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    position: relative;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding: 1em;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.announcement {
+    background-color: white;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement h2 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.announcement .date {
+    color: #777;
+    font-size: 0.9em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.floating-button {
+    position: fixed;
+    right: 20px;
+    bottom: 80px; /* 增大按钮离页面底部的距离 */
+}
+
+.floating-button a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.floating-button a:hover {
+    background-color: #45a049;
+}
+
+.qrcode-overlay {
+    position: fixed;
+    right: 120px;
+    bottom: 80px; /* 增大二维码离页面底部的距离 */
+    display: none;
+    z-index: 999;
+}
+
+.qrcode-bubble {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.qrcode-bubble img {
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.qrcode-bubble p {
+    margin: 0;
+    font-size: 12px;
+    color: #333;
+}
+
+.floating-button:hover + .qrcode-overlay {
+    display: block;
+}
+
+.social-icons {
+    position: absolute;
+    top: -50px; /* 调整图标位置使其在页脚上方，增加间距 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px; /* 调整图标间距 */
+}
+
+.social-icons a {
+    display: block;
+    width: auto; /* 调整宽度为自动 */
+    height: 40px; /* 调整高度 */
+}
+
+.social-icons a img {
+    width: auto; /* 调整宽度为自动 */
+    height: 100%; /* 调整高度为100% */
+    object-fit: contain; /* 保持图片比例 */
+    border: none;
+    outline: none;
+}
+
+#article-container {
+    overflow-y: scroll; /* 允许垂直滚动 */
+    max-height: calc(100vh - 100px); /* 假设页眉和页脚高度总共100px */
+    padding: 1em; /* 根据需要调整 */
+}
